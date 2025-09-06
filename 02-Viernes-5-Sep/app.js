@@ -45,9 +45,9 @@ textureLoader.load(
     }
 
     textureLoader.load(
-        './texturas/verde.png',
+        './texturas/tronco.png',
         function (textureTronco) {
-            const troncoGeometry = new THREE.CylinderGeometry(2, 12, 16);
+            const troncoGeometry = new THREE.CylinderGeometry(2, 4, 12, 16);
             const troncoMatcap = new THREE.MeshMatcapMaterial({ matcap : textureTronco })
             const tronco = new THREE.Mesh(troncoGeometry, troncoMatcap);
             tronco.position.set(0, -10, -10);
