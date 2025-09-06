@@ -23,7 +23,7 @@ sphere.position.z = -8;
 // Renderer
 const renderer = new THREE.WebGLRenderer({ canvas: canvas });
 renderer.setSize(canvas.width, canvas.height);
-renderer.setClearColor(new THREE.Color("#000000")); // Fondo inicial negro
+
 
 // Animación de rotación
 function animate() {
@@ -34,17 +34,17 @@ function animate() {
 }
 animate();
 
-// Movimiento tipo puesta de sol
+// Movimiento de puesta de sol
 window.addEventListener("mousedown", function () {
   const extremoIzq = -canvas.width / 50;
   const extremoDer = canvas.width / 50;
   const alturaMax = 20;
 
-  // Posición inicial
+  // Posición inicial del sol
   sphere.position.x = extremoIzq;
   sphere.position.y = 0;
 
-  // Animación en curva: izquierda → centro arriba → derecha abajo
+  // Animación de la puesta de sol
   gsap.to(sphere.position, {
     x: 0,
     y: alturaMax,
@@ -60,27 +60,23 @@ window.addEventListener("mousedown", function () {
     }
   });
 
-  // Cambio de color del material
+  // Cambio de color del sol
   gsap.to(sphere.material.color, {
-    r: 0.79, // "#ca5100"
-    g: 0.32,
-    b: 0.0,
+    color: "#ca5100",
     duration: 4,
     onComplete: function () {
       gsap.to(sphere.material.color, {
-        r: 0.94, // "#efff40"
-        g: 1.0,
-        b: 0.25,
-        duration: 3
+        color: "#efff40",
+        duration: 3,
       });
     }
   });
 
-  // Cambio del fondo con colores directos
-  let colorProxy = { value: "#87ceeb" }; // SkyBlue
+  // Cambio del fondo 
+  let colorProxy = { value: "#87ceeb" }; 
 
   gsap.to(colorProxy, {
-    value: "#ff7f50", // Coral
+    value: "#ff7f50", 
     duration: 4,
     ease: "power1.inOut",
     onUpdate: () => {
