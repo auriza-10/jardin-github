@@ -44,9 +44,28 @@ textureLoader.load(
       }
     }
 
-    // activar animación después de agregar las esferas
+    textureLoader.load(
+        './texturas/verde.png',
+        function (textureTronco) {
+            const troncoGeometry = new THREE.CylinderGeometry(2, 12, 16);
+            const troncoMatcap = new THREE.MeshMatcapMaterial({ matcap : textureTronco })
+            const tronco = new THREE.Mesh(troncoGeometry, troncoMatcap);
+            tronco.position.set(0, -10, -10);
+            scene.add(tronco);
+
+    //activar animación luego de agregar el tronco
     animate();
 },
+    undefined,
+    function (error) {
+        console.error("Error al cargar la textura del tronco", error);
+    }
+  );
+},
+
+
+    // activar animación después de agregar las esferas
+ 
 undefined,
 function(error){
     console.error("Error al cargar la textura de las hojas", error);
