@@ -1,4 +1,4 @@
-console.log("Sesion 05. Ejercicio 03: Matcaps");
+console.log("Jardín Github. Ejercicio 02: Creación de un árbol");
 console.log(THREE);
 
 //Configurar canvas
@@ -16,7 +16,7 @@ const renderer = new THREE.WebGLRenderer({ canvas: canvas });
 renderer.setSize(canvas.width, canvas.height);
 
 //Geometría para las esferas
-const geometry = new THREE.SphereGeometry(10, 25, 10);
+const geometry = new THREE.SphereGeometry(5, 25, 10);
 
 //Cargar textura matcap
 const textureLoader = new THREE.TextureLoader();
@@ -27,9 +27,9 @@ textureLoader.load(
 
     // Crear esferas para simular un árbol
     const niveles = 4;
-    const separacionY = 12;
+    const separacionY = 6;
     const radioBase = 4;
-    const offsetX = 12;
+    const offsetX = 6;
 
     for (let nivel = 0; nivel < niveles; nivel++) {
       const cantidad = radioBase - nivel;
@@ -46,6 +46,10 @@ textureLoader.load(
 
     // activar animación después de agregar las esferas
     animate();
+},
+undefined,
+function(error){
+    console.error("Error al cargar la textura de las hojas", error);
   }
 );
 
