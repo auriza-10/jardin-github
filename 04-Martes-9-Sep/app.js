@@ -120,5 +120,62 @@ ctx.lineTo(600, 155);
 ctx.stroke();
 ctx.closePath();
 
+ctx.beginPath();
+ctx.strokeStyle= "#ae9704ff";
+ctx.lineWidth= 8;
+ctx.moveTo(600, 1200);
+ctx.lineTo(600, 0);
+ctx.moveTo(620, 1200);
+ctx.lineTo(620, 0);
+ctx.moveTo(640, 1200);
+ctx.lineTo(640, 0);
+ctx.moveTo(660, 1200);
+ctx.lineTo(660, 0);
+ctx.stroke();
+ctx.closePath();
+
+ctx.beginPath();
+ctx.strokeStyle= "#fff200ff";
+ctx.lineWidth= 4;
+ctx.moveTo(595, 165);
+ctx.lineTo(750, 165);
+ctx.moveTo(615, 175);
+ctx.lineTo(750, 175);
+ctx.moveTo(635, 185);
+ctx.lineTo(750, 185);
+ctx.moveTo(655, 195);
+ctx.lineTo(750, 195);
+ctx.stroke();
+ctx.closePath();
+
+ctx.beginPath();
+ctx.strokeStyle= "#ae0404ff";
+ctx.lineWidth= 8;
+ctx.moveTo(750, 1200);
+ctx.lineTo(750, 0);
+ctx.moveTo(770, 1200);
+ctx.lineTo(770, 0);
+ctx.moveTo(790, 1200);
+ctx.lineTo(790, 0);
+ctx.moveTo(810, 1200);
+ctx.lineTo(810, 0);
+ctx.stroke();
+ctx.closePath();
+
+ctx.beginPath();
+ctx.strokeStyle= "#ff0000ff";
+ctx.lineWidth= 4;
+ctx.moveTo(745, 205);
+ctx.lineTo(900, 205);
+ctx.moveTo(765, 215);
+ctx.lineTo(900, 215);
+ctx.moveTo(785, 225);
+ctx.lineTo(900, 225);
+ctx.moveTo(805, 235);
+ctx.lineTo(900, 235);
+ctx.stroke();
+ctx.closePath();
+
+
 
 
