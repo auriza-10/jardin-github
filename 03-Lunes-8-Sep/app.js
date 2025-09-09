@@ -32,6 +32,7 @@ ctx.closePath();
 ctx.beginPath();
 ctx.fillStyle= "#000";
 ctx.ellipse(650, 300, 10, 14, 0, 0, 2 * Math.PI);
+ctx.ellipse(750, 300, 14, 14, 0, 0, 2 * Math.PI);
 ctx.fill();
 ctx.closePath();
 
@@ -55,3 +56,23 @@ ctx.fillStyle= "#ba5f5fff";
 ctx.ellipse(700, 400, 30, 10, 0, 0, 2 * Math.PI);
 ctx.fill();
 ctx.closePath();
+
+ctx.beginPath();
+ctx.strokeStyle= "#000";
+ctx.lineWidth = 3;
+ctx.moveTo(700, 300);
+ctx.lineTo(700, 380);
+ctx.stroke();
+ctx.closePath();
+
+ctx.beginPath();
+ctx.fillStyle= "#000";
+ctx.rect(587, 140, 230, 80);
+ctx.rect(510, 140, 100, 400);
+ctx.rect(790, 140, 100, 400);
+ctx.fill();
+ctx.closePath();
+
+
+
+
