@@ -21,6 +21,12 @@ ctx.fill();
 ctx.closePath();
 
 ctx.beginPath();
+ctx.fillStyle= "#253fd2ff";
+ctx.ellipse(700, 680, 150, 205, 0, 0, 2 * Math.PI);
+ctx.fill();
+
+
+ctx.beginPath();
 ctx.strokeStyle= "#000";
 ctx.lineWidth = 5;
 ctx.fillStyle = "#fff";
@@ -72,6 +78,7 @@ ctx.rect(510, 140, 100, 400);
 ctx.rect(790, 140, 100, 400);
 ctx.fill();
 ctx.closePath();
+
 
 
 
