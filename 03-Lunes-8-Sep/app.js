@@ -46,6 +46,12 @@ ctx.closePath();
 
 ctx.beginPath();
 ctx.fillStyle= "#000";
-ctx.ellipse(650, 300, 10, 14, 0, 0, 2 * Math.PI);
+ctx.ellipse(750, 300, 14, 14, 0, 0, 2 * Math.PI);
+ctx.fill();
+ctx.closePath();
+
+ctx.beginPath();
+ctx.fillStyle= "#ba5f5fff";
+ctx.ellipse(700, 400, 30, 10, 0, 0, 2 * Math.PI);
 ctx.fill();
 ctx.closePath();
