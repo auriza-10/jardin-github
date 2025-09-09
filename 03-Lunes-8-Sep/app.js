@@ -19,3 +19,33 @@ ctx.fillStyle = "#d0a466ff";
 ctx.rect(650, 300, 100, 200);
 ctx.fill();
 ctx.closePath();
+
+ctx.beginPath();
+ctx.strokeStyle= "#000";
+ctx.lineWidth = 5;
+ctx.fillStyle = "#fff";
+ctx.ellipse(650, 300, 20, 15, 0, 0, 2 * Math.PI);
+ctx.stroke();
+ctx.fill();
+ctx.closePath();
+
+ctx.beginPath();
+ctx.fillStyle= "#000";
+ctx.ellipse(650, 300, 10, 14, 0, 0, 2 * Math.PI);
+ctx.fill();
+ctx.closePath();
+
+ctx.beginPath();
+ctx.strokeStyle= "#000";
+ctx.lineWidth = 5;
+ctx.fillStyle = "#fff";
+ctx.ellipse(750, 300, 30, 15, 0, 0, 2 * Math.PI);
+ctx.stroke();
+ctx.fill();
+ctx.closePath();
+
+ctx.beginPath();
+ctx.fillStyle= "#000";
+ctx.ellipse(650, 300, 10, 14, 0, 0, 2 * Math.PI);
+ctx.fill();
+ctx.closePath();
