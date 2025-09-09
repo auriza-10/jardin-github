@@ -22,5 +22,19 @@ ctx.lineTo(60, 0);
 ctx.stroke();
 ctx.closePath();
 
+ctx.beginPath();
+ctx.strokeStyle= "#38a8dcff";
+ctx.lineWidth= 4;
+ctx.moveTo(0, 5);
+ctx.lineTo(150, 5);
+ctx.moveTo(15, 15);
+ctx.lineTo(150, 15);
+ctx.moveTo(35, 25);
+ctx.lineTo(150, 25);
+ctx.moveTo(55, 35);
+ctx.lineTo(150, 35);
+ctx.stroke();
+ctx.closePath();
+
 
 
