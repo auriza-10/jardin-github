@@ -176,6 +176,39 @@ ctx.lineTo(900, 235);
 ctx.stroke();
 ctx.closePath();
 
+ctx.beginPath();
+ctx.strokeStyle= "#4504aeff";
+ctx.lineWidth= 8;
+ctx.moveTo(900, 1200);
+ctx.lineTo(900, 0);
+ctx.moveTo(920, 1200);
+ctx.lineTo(920, 0);
+ctx.moveTo(940, 1200);
+ctx.lineTo(940, 0);
+ctx.moveTo(960, 1200);
+ctx.lineTo(960, 0);
+ctx.stroke();
+ctx.closePath();
+
+ctx.beginPath();
+ctx.strokeStyle= "#8000ffff";
+ctx.lineWidth= 4;
+ctx.moveTo(895, 245);
+ctx.lineTo(1050, 245);
+ctx.moveTo(915, 255);
+ctx.lineTo(1050, 255);
+ctx.moveTo(935, 265);
+ctx.lineTo(1050, 265);
+ctx.moveTo(955, 275);
+ctx.lineTo(1050, 275);
+ctx.stroke();
+ctx.closePath();
+
+
+
+
+
+
 
 
 
