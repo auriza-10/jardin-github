@@ -204,6 +204,34 @@ ctx.lineTo(1050, 275);
 ctx.stroke();
 ctx.closePath();
 
+ctx.beginPath();
+ctx.strokeStyle= "#009d7bff";
+ctx.lineWidth= 8;
+ctx.moveTo(1050, 1200);
+ctx.lineTo(1050, 0);
+ctx.moveTo(1070, 1200);
+ctx.lineTo(1070, 0);
+ctx.moveTo(1090, 1200);
+ctx.lineTo(1090, 0);
+ctx.moveTo(1110, 1200);
+ctx.lineTo(1110, 0);
+ctx.stroke();
+ctx.closePath();
+
+ctx.beginPath();
+ctx.strokeStyle= "#00ffc3ff";
+ctx.lineWidth= 4;
+ctx.moveTo(1045, 285);
+ctx.lineTo(1200, 285);
+ctx.moveTo(1065, 295);
+ctx.lineTo(1200, 295);
+ctx.moveTo(1085, 305);
+ctx.lineTo(1200, 305);
+ctx.moveTo(1105, 315);
+ctx.lineTo(1200, 315);
+ctx.stroke();
+ctx.closePath();
+
 
 
 
