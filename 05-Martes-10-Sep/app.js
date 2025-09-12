@@ -6,9 +6,6 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0xffffff);
-
-const canvas = document.getElementById('lienzo');
 const renderer = new THREE.WebGLRenderer({
   antialias: true,
   canvas: canvas,
