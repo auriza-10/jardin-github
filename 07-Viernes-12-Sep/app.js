@@ -32,3 +32,14 @@ function animate() {
     renderer.render(scene, camera);
 }
 animate();
+
+window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    camera.aspect = canvas.width / canvas.height;
+    camera.updateProjectionMatrix();
+    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+    torusKnot.material.color.set('#' + randomColor);
+    console.log('Ventana redimensionada. Nuevo color:', '#' + randomColor);
+});
