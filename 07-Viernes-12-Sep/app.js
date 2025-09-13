@@ -14,7 +14,9 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setSize(window.innerWidth, window.innerHeight);
 const camera = new THREE.PerspectiveCamera(45, canvas.width / canvas.height, 0.1, 1000);
 
-const geometry = new THREE.TorusKnotGeometry();
+//const geometry = new THREE.TorusKnotGeometry();
+const geometry = new THREE.TorusGeometry();
+//const geometry = new THREE.CylinderGeometry();
 
 const material = new THREE.MeshBasicMaterial({ color: "#ff0000" }); 
 
