@@ -7,3 +7,40 @@
  
 }
 
+body {
+  background: linear-gradient(#1651e7, #7baffe);
+  margin: 0;
+  height: 100vh;
+}
+
+.boomerang {
+  position: relative;
+  width: 160px;
+  height: 650px;
+  margin-left: 50px;
+}
+
+.brazo {
+  position: absolute;
+  width: 200px;
+  height: 60px;
+  background: linear-gradient(#09ff00, #3bc600);
+  border-radius: 50% / 50%;
+  top: 50%;
+  transform-origin: center right;
+}
+
+.izquierdo {
+  left: 0;
+  transform: rotate(-45deg);
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 10px;
+}
+
+.derecho {
+  right: 0;
+  transform-origin: center left;
+  transform: rotate(45deg);
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 10px;
+}
