@@ -37,6 +37,10 @@ window.addEventListener("mousedown", function () {
                 x: 0,
                 y: 0,
                 ease: "power2.inOut",
+                onComplete: () => {
+                    gsap.killTweensOf(".boomerang");
+                    gsap.set(".boomerang", { rotation: 0 });
+                }
               });
             }
           });
@@ -45,4 +49,3 @@ window.addEventListener("mousedown", function () {
     }
   });
 });
-
