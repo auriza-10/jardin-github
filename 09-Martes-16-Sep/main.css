@@ -1,0 +1,17 @@
+#lienzo {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.rectangulo {
+    position: absolute;
+    top: 600px;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    background-color: #ff0000;
+}
