@@ -18,6 +18,9 @@ renderer.setSize(canvas.width, canvas.height);
 //Geometría para las esferas
 const geometry = new THREE.SphereGeometry(5, 25, 10);
 
+// Variable global para el tronco
+let tronco;
+
 //Cargar textura matcap
 const textureLoader = new THREE.TextureLoader();
 textureLoader.load(
@@ -44,30 +47,27 @@ textureLoader.load(
       }
     }
 
+    // Cargar textura del tronco
     textureLoader.load(
-        './texturas/tronco.png',
-        function (textureTronco) {
-            const troncoGeometry = new THREE.CylinderGeometry(2, 4, 12, 16);
-            const troncoMatcap = new THREE.MeshMatcapMaterial({ matcap : textureTronco })
-            const tronco = new THREE.Mesh(troncoGeometry, troncoMatcap);
-            tronco.position.set(0, -10, -10);
-            scene.add(tronco);
+      './texturas/tronco.png',
+      function (textureTronco) {
+        const troncoGeometry = new THREE.CylinderGeometry(2, 4, 12, 16);
+        const troncoMatcap = new THREE.MeshMatcapMaterial({ matcap: textureTronco });
+        tronco = new THREE.Mesh(troncoGeometry, troncoMatcap); // ahora usa la variable global
+        tronco.position.set(0, -10, -10);
+        scene.add(tronco);
 
-    //activar animación luego de agregar el tronco
-    animate();
-},
-    undefined,
-    function (error) {
+        //activar animación luego de agregar el tronco
+        animate();
+      },
+      undefined,
+      function (error) {
         console.error("Error al cargar la textura del tronco", error);
-    }
-  );
-},
-
-
-    // activar animación después de agregar las esferas
- 
-undefined,
-function(error){
+      }
+    );
+  },
+  undefined,
+  function (error) {
     console.error("Error al cargar la textura de las hojas", error);
   }
 );
@@ -77,3 +77,13 @@ function animate() {
   requestAnimationFrame(animate);
   renderer.render(scene, camera);
 }
+
+// Cambiar el color del tronco al darle click a un botón
+const botonCambiarColor = document.getElementById("boton");
+botonCambiarColor.addEventListener("click", function () {
+  if (tronco) { // aseguramos que ya exista
+    const colores = [0x8B4513, 0xA0522D, 0xD2691E, 0xCD853F, 0xF4A460];
+    const colorAleatorio = colores[Math.floor(Math.random() * colores.length)];
+    tronco.material.color.setHex(colorAleatorio);
+  }
+});
