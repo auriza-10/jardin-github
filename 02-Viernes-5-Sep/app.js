@@ -21,7 +21,7 @@ const geometry = new THREE.SphereGeometry(5, 25, 10);
 //Cargar textura matcap
 const textureLoader = new THREE.TextureLoader();
 textureLoader.load(
-  './texturas/verdee.png',
+  './texturas/verde.png',
   function (texture) {
     const matcapMaterial = new THREE.MeshMatcapMaterial({ matcap: texture });
 
@@ -77,3 +77,4 @@ function animate() {
   requestAnimationFrame(animate);
   renderer.render(scene, camera);
 }
+
