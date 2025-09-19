@@ -6,3 +6,21 @@
     height: 100%;
     background-color: #000;
 }
+
+#boton {
+    position: absolute;
+    top: 50px; /* primera posición */
+    left: 50px;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    padding: 15px 50px;
+}
+
+#botoon {
+    position: absolute;
+    top: 120px; /* más abajo que el primero */
+    left: 50px;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    padding: 15px 50px;
+}
