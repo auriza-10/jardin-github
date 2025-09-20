@@ -6,3 +6,12 @@
     height: 100%;
     background-color: #000;
 }
+
+#giro {
+    position: absolute;
+    top: 50px; /* primera posición */
+    left: 50px;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    padding: 15px 50px;
+}
