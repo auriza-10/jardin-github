@@ -43,4 +43,21 @@ function animate() {
    renderer.render(scene, camera);
 }
 
+document.getElementById("giro").addEventListener("click", () => {
+   let rotation = { y: 0 };
+   const targetRotation = { y: Math.PI * 4 }; // 720°
+    const duration = 2000; // milisegundos
+    const startTime = performance.now();
+    function rotate(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        rotation.y = progress * targetRotation.y;
+        mesh.rotation.y = rotation.y;
+        if (progress < 1) {
+            requestAnimationFrame(rotate);
+        }   
+    }
+    requestAnimationFrame(rotate);
+});
+
 
