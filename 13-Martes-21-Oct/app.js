@@ -14,3 +14,20 @@ camera.position.z = 60;
 
 const renderer = new THREE.WebGLRenderer({ canvas: canvas });
 renderer.setSize(canvas.width, canvas.height);
+
+//Geometría para la esfera
+const geometry = new THREE.SphereGeometry(5, 32, 16);
+const material = new THREE.MeshBasicMaterial({ color: 0x40efff });
+const sphere = new THREE.Mesh(geometry, material);
+scene.add(sphere);
+sphere.position.z = -10;
+
+// Animación de levitación
+let clock = new THREE.Clock();
+function animate() {
+  requestAnimationFrame(animate);
+    let elapsed = clock.getElapsedTime();
+    sphere.position.y = Math.sin(elapsed) * 10; 
+  renderer.render(scene, camera);
+}
+animate();
