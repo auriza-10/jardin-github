@@ -58,7 +58,7 @@ header {
 footer {
   position: relative;
   text-align: center;
-  padding-bottom: 80px;
+  padding-bottom: 0;
 }
 
 .texto {
@@ -82,8 +82,8 @@ footer {
   align-items: flex-end;
   width: 100%;
   padding: 0;
-  position: absolute;
-  bottom: 0;
+  position: fixed;
+  bottom: -70px;
   left: 0;
 }
 
