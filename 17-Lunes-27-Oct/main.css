@@ -21,7 +21,7 @@ body {
 
 .title {
   position: absolute;
-  top: 25%;
+  top: 5%;
   left: 50%;
   transform: translateX(-50%);
   font-size: 11vw;
