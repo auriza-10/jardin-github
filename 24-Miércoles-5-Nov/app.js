@@ -1,10 +1,23 @@
-console.log("Jardín Github ");
-console.log(THREE);
+console.log("Jardín Github");
 
-const canvas = document.getElementById('scene');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+const titles = document.querySelectorAll('.titles span');
+const mainImage = document.getElementById('main-image');
 
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.z = 5;
+if (titles && mainImage) {
+  titles.forEach(title => {
+    title.addEventListener('mouseenter', () => {
+      const newImg = title.getAttribute('data-img');
+      mainImage.style.opacity = 0;
+      setTimeout(() => {
+        mainImage.src = newImg;
+        mainImage.style.opacity = 1;
+      }, 200);
+
+      titles.forEach(t => t.classList.remove('active'));
+      title.classList.add('active');
+    });
+  });
+} else {
+  console.error("No se encontró la imagen principal o los títulos en el DOM.");
+}
+
